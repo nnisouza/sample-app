@@ -9,12 +9,12 @@
         </tr>
         <tr ng-repeat="item in articles.articles">
             <td>
-                <a ui-sref="^.edit({id: item.id})">{{item.fullTitle}}</a>
+                <a ui-sref="^.edit({slug: item.titleSlug, id: item.id})">{{item.fullTitle}}</a>
             </td>
             <td>{{item.updatedAt|date}}</td>
             <td>{{item.slug}}</td>
             <td>
-                <a ui-sref="^.view({id: item.id})">View</a>
+                <a ui-sref="^.view({slug: item.titleSlug, id: item.id})">View</a>
                 <a href="" ng-click="articles.remove($index)">Remove</a>
             </td>
         </tr>

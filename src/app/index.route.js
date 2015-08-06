@@ -36,14 +36,16 @@
             })
 
             .state('articles.view', {
-                url: '/:id',
+                url: '/:slug',
+                 params: { id: { value: -1 } },
                 templateUrl: 'app/article/article.view.html',
                 controller: 'ArticleViewController',
                 controllerAs: 'articleView'
             })
 
             .state('articles.edit', {
-                url: '/edit/:id',
+                url: '/edit/:slug',
+                 params: { id: { value: -1 } },
                 templateUrl: 'app/article/article.edit.html',
                 controller: 'ArticleEditController',
                 controllerAs: 'article'
