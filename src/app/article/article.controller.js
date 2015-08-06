@@ -26,11 +26,13 @@
     }
 
     /** @ngInject */
-    function ArticleViewController($state, Article) {
+    function ArticleViewController($state, Article, $scope, $location) {
         var vm = this;
         Article.findById($state.params.id).then(function (res) {
             vm.current = res;
         });
+        
+        $scope.articleUrl = $location.absUrl();
     }
 
     /** @ngInject */
