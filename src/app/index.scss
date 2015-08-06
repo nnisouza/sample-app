@@ -64,6 +64,18 @@ $icon-font-path: "../../bower_components/bootstrap-sass-official/assets/fonts/bo
     background-color: #428bca;
 }
 
+#toast-container {
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 60px;
+
+}
+#toast-container .toast{
+  margin: 0 auto;
+}
+
 /**
  *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject
  *  all your sass files automatically
