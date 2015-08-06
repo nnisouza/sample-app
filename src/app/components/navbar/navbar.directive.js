@@ -21,7 +21,8 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController(moment) {
+    function NavbarController($scope, moment) {
+      $scope.collapsed = true;
       var vm = this;
 
       // "vm.creation" is avaible by directive option "bindToController: true"
